@@ -24,11 +24,12 @@ p {
 }
 
 a{
-  color: #0F7C10;
+  color: #147CE1;
   text-decoration: none;
 }
 
 a:hover{
+  color: #147CE1;
   text-decoration: underline;
 }
 
@@ -47,7 +48,7 @@ header{
 .container{
   position: relative;
   margin: auto;
-  display: flex;
+  /* display: flex; */
 }
 
 @media only screen and (max-width: 600px) {
@@ -88,8 +89,8 @@ header{
   flex-wrap:wrap;
   width: 100%;
   margin: auto;
-  /* overflow-x: auto; */
-  /* justify-content: space-between; */
+  /* overflow-x: auto;
+  justify-content: space-between; */
   /* -webkit-flex-wrap: nowrap; */
 }
 
@@ -113,7 +114,6 @@ header{
 }
 
 #navigation a{
-  /* float:left; */
   padding: 0 20px;
   color: white;
 }
@@ -142,20 +142,7 @@ header{
   color: orange;
 }
 
-
-@media screen and (min-width: 736px) {
-  #naviicon {
-    display: none;
-  }
-}
-
-@media only screen and (max-width: 735px) {
-  #navigation a {
-    display: none;
-  }
-}
-
-.mobile-navi-icon {
+.mobile-menu-icon {
   width: 40px;
   height: 45px;
   display: flex;
@@ -169,17 +156,36 @@ header{
   z-index: 10;
 }
 
-.mobile-navi-icon > div {
+.mobile-menu-icon > div {
   width: 100%;
   height: 1px;
   background: #fff;
 }
 
-.mobile-navi-icon:hover {
+.mobile-menu-icon:hover {
   cursor: pointer;
   background-color: rgba(245,166,35,.2);
 }
 
+@media screen and (min-width: 736px) {
+  .mobile-menu-icon {
+    display: none;
+  }
+  #navigation {
+    display: flex !important;
+  }
+}
+
+@media only screen and (max-width: 735px) {
+  #navigation {
+    display: flex;
+    flex-direction: column;
+    text-align: right;
+  }
+  #navigation a {
+    padding: 10px 25px;
+  }
+}
 
 /* NOTE: START banner */
 .banner {
@@ -286,6 +292,7 @@ h1{
 }
 
 .logo-home img{
+  position: fixed;
   max-width: 330px;
   max-height: 180px;
   display: flex;
@@ -301,7 +308,9 @@ h1{
 }
 
 #navigation.navi-home{
-  display: flex;
+  position: fixed;
+  left: 0;
+  right: 0;
   justify-content: center;
 }
 
@@ -311,7 +320,7 @@ h1{
 
 @media only screen and (max-width: 1024px) {
   .container-navi-home {
-    font-size: 20px;
+    font-size: 22px;
   }
   .logo-home img{
     width: 280px;
@@ -364,8 +373,10 @@ h1{
     width: 100%;
     height: 100%;
     position: fixed;
-    right: 0;
     top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
     z-index: 1;
     background-image: url(../images/homepage/audience.jpg);
     background-position: center;
@@ -510,20 +521,192 @@ h1{
 }
 
 
+/* NOTE: START media page */
+.nav-tabs{
+  border: 0;
+  font-size: 22px;
+  margin: 20px 0;
+}
+
+.nav-tabs > li > a{
+  color: black;
+  padding: 10px 50px;
+  background: transparent;
+  border: 0;
+}
+
+.nav-tabs > li > a:hover{
+  color: orange;
+  font-weight: 500;
+  background: transparent;
+  border: 0;
+}
+
+.nav-tabs > li.active > a{
+  background-color: transparent;
+  border: 0;
+  font-weight: bold;
+  border-bottom: 3px orange solid;
+  color: black;
+}
+
+.nav-tabs > li.active > a:hover{
+  background-color: transparent;
+  border: 0;
+  border-bottom: 3px orange solid;
+  color: black;
+}
+
+.nav-tabs > li.active > a:focus{
+  background-color: transparent;
+  border: 0;
+  border-bottom: 3px orange solid;
+  color: black;
+}
+
+
+.lightbox-image{
+  margin: 20px auto 25px;
+  transition: all .5s ease-in-out;
+  position: relative;
+  z-index: 1;
+}
+
+.lightbox-image:hover{
+  box-shadow: 10px 30px 80px rgba(0,0,0,.2);
+  z-index: 10;
+}
+
+iframe{
+  display: flex;
+  margin: 15px auto 30px;
+}
+
+#videos{
+  width: 95%;
+  margin: auto;
+}
+
+
+/* NOTE: START merch page */
+ul.filtr-bar{
+  display: flex;
+  justify-content: flex-start;
+  padding: 0;
+  list-style: none;
+  font-size: 22px;
+}
+
+.filtr-bar li{
+  padding: 10px 30px;
+  margin: auto 20px;
+  text-transform: capitalize;
+}
+
+.filtr-bar li:hover {
+  /* color: #FF9F00; */
+  color: orange;
+  cursor: pointer;
+}
+
+.filtr-bar li.active{
+  font-weight: bold;
+  border-bottom: 3px orange solid;
+  color: black;
+}
+
+.filtr-container .row{
+
+}
+
+.filtr-item{
+  padding: 0;
+  display: inline-block;
+}
+
+.filtr-item img{
+  width: 300px;
+  height: 300px;
+  display: block;
+  margin: 20px auto;
+  box-shadow: 0 10px 100px rgba(0, 0, 0, 0.2);
+  transition: all .3s ease;
+}
+
+.merch-image-overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 300px;
+  display: block;
+  margin: 20px auto;
+  transition: .3s ease;
+  background-color: orange;
+  opacity: 0;
+  box-shadow: 2px 2px 50px black;
+  z-index: 10;
+}
+
+.filtr-item:hover .merch-image-overlay{
+  opacity: .9;
+  cursor: no-drop;
+}
+
+.merch-info {
+  position: relative;
+  margin: auto;
+  width: 80%;
+  text-align: center;
+  color: black;
+  font-weight: lighter;
+  opacity: 1;
+}
+
+.merch-name{
+  top:30%;
+  font-size: 22px;
+}
+
+.merch-price{
+  font-size: 24px;
+  position: absolute;
+  width: 100%;
+  top:70%;
+}
+
+.filtr-item:before{
+    content: "Sold Out";
+    width: 4rem;
+    height: 4rem;
+    border-radius: 100px;
+    position: absolute;
+    top: 12%;
+    left: 11%;
+    color: #fff;
+    text-align: center;
+    padding: 10px;
+    z-index: 1;
+    background: rgba(255,0,0,.9);
+}
+
+
 /* NOTE: START tours page */
 table{
   text-transform: capitalize;
   width: 100%;
   min-width: 1000px;
   margin: 30px 0;
-  /* position: absolute; */
-  border-collapse: collapse;
+  /* border-collapse: collapse; */
   background-color: #FEF6EC;
+  /* background-color: white; */
+  font-size: 18px;
+
 }
 
 thead{
   background-color: #FDE9CB;
-
 }
 
 thead tr th{
@@ -531,7 +714,8 @@ thead tr th{
 }
 
 tbody tr:hover {
-  background-color: #FFFBF4;
+  /* background-color: #FFFBF4; */
+  background-color: white;
 }
 
 th{
@@ -542,7 +726,7 @@ th{
 
 td{
   line-height: 1.7;
-  height: 90px;
+  height: 120px;
 }
 
 tbody tr td:nth-child(1) {

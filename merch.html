@@ -4,6 +4,8 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>U2 - Merch</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./assets/stylesheets/normalize.css" />
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway:400,500,600,700" rel="stylesheet">
@@ -19,7 +21,7 @@
         <a href="index.html">
           <img class="logo" src="./assets/images/u2-white-logo.png" alt="U2 logo" width="110" height="60"/>
         </a>
-        <div id="naviicon" class="mobile-navi-icon">
+        <div id="MenuIcon" class="mobile-menu-icon">
             <div></div>
             <div></div>
             <div></div>
@@ -46,20 +48,234 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-9">
-
+      <div class="col-xs-12">
+        <ul class="filtr-bar">
+          <li class="filtr-button active" data-filter="all">
+            All products
+          </li>
+          <li class="filtr-button" data-filter="clothing">
+            clothing
+          </li>
+          <li class="filtr-button" data-filter="accessories">
+            accessories
+          </li>
+          <li class="filtr-button" data-filter="music">
+            music
+          </li>
+          <li class="filtr-button" data-filter="prints">
+            prints
+          </li>
+        </ul>
       </div>
     </div>
+
+    <div class="filtr-container row">
+      <div class="filtr-item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-category="clothing" data-sort="value">
+        <img class="image-responsive" src="./assets/images/merch/clothing/clothing-1.jpg" alt="U2 Herstory Ocean Blue Ladies T-shirt" />
+        <div class="merch-image-overlay">
+          <div class="merch-info merch-name">
+            U2 Herstory Ocean Blue Ladies T-shirt
+          </div>
+          <div class="merch-info merch-price">US$40.00</div>
+        </div>
+      </div>
+      <div class="filtr-item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-category="clothing" data-sort="value">
+        <img class="image-responsive" src="./assets/images/merch/clothing/clothing-2.jpg" alt="U2 Logo Black T-shirt" />
+        <div class="merch-image-overlay">
+          <div class="merch-info merch-name">
+            U2 Logo Black T-shirt
+          </div>
+          <div class="merch-info merch-price">US$30.00</div>
+        </div>
+      </div>
+      <div class="filtr-item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-category="accessories" data-sort="value">
+        <img class="image-responsive" src="./assets/images/merch/accessories/accessories-1.jpg" alt="The Joshua Tree Tour Logo Black Mug" />
+        <div class="merch-image-overlay">
+          <div class="merch-info merch-name">
+            The Joshua Tree Tour Logo Black Mug
+          </div>
+          <div class="merch-info merch-price">US$20.00</div>
+        </div>
+      </div>
+      <div class="filtr-item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-category="accessories" data-sort="value">
+        <img class="image-responsive" src="./assets/images/merch/accessories/accessories-2.jpg" alt="U2 Zooropa Black Mug" />
+        <div class="merch-image-overlay">
+          <div class="merch-info merch-name">
+            U2 Zooropa Black Mug
+          </div>
+          <div class="merch-info merch-price">US$20.00</div>
+        </div>
+      </div>
+      <div class="filtr-item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-category="music" data-sort="value">
+        <img class="image-responsive" src="./assets/images/merch/music/music-1.jpg" alt="U2 Innocence + Experience Live in Paris Deluxe Edition (2dvd)" />
+        <div class="merch-image-overlay">
+          <div class="merch-info merch-name">
+            U2 Innocence + Experience Live in Paris Deluxe Edition
+          </div>
+          <div class="merch-info merch-price">US$24.95</div>
+        </div>
+      </div>
+      <div class="filtr-item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-category="music" data-sort="value">
+        <img class="image-responsive" src="./assets/images/merch/music/music-2.jpg" alt="U2 Zooropa 2LP" />
+        <div class="merch-image-overlay">
+          <div class="merch-info merch-name">
+            U2 Zooropa 2LP
+          </div>
+          <div class="merch-info merch-price">US$27.99</div>
+        </div>
+      </div>
+      <div class="filtr-item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-category="prints" data-sort="value">
+        <img class="image-responsive" src="./assets/images/merch/prints/prints-1.jpg" alt="Anton Corbijn U2 and I: the Photographs 1982-2004 Large Edition" />
+        <div class="merch-image-overlay">
+          <div class="merch-info merch-name">
+            Anton Corbijn U2 and I: the Photographs 1982-2004 Large Edition
+          </div>
+          <div class="merch-info merch-price">US$120.00</div>
+        </div>
+      </div>
+      <div class="filtr-item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-category="prints" data-sort="value">
+        <img class="image-responsive" src="./assets/images/merch/prints/prints-2.jpg" alt="'October' Album Lithograph" />
+        <div class="merch-image-overlay">
+          <div class="merch-info merch-name">
+            'October' Album Lithograph
+          </div>
+          <div class="merch-info merch-price">US$100.00</div>
+        </div>
+      </div>
+      <div class="filtr-item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-category="clothing" data-sort="value">
+        <img class="image-responsive" src="./assets/images/merch/clothing/clothing-3.jpg" alt="U2 Elevation Grey T-shirt" />
+        <div class="merch-image-overlay">
+          <div class="merch-info merch-name">
+            U2 Elevation Grey T-shirt
+          </div>
+          <div class="merch-info merch-price">US$30.00</div>
+        </div>
+      </div>
+      <div class="filtr-item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-category="clothing" data-sort="value">
+        <img class="image-responsive" src="./assets/images/merch/clothing/clothing-4.jpg" alt="U2 Elevation Tour Black T" />
+        <div class="merch-image-overlay">
+          <div class="merch-info merch-name">
+            U2 Elevation Tour Black T
+          </div>
+          <div class="merch-info merch-price">US$30.00</div>
+        </div>
+      </div>
+      <div class="filtr-item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-category="accessories" data-sort="value">
+        <img class="image-responsive" src="./assets/images/merch/accessories/accessories-3.jpg" alt="The Joshua Tree Tour Logo Black Mug" />
+        <div class="merch-image-overlay">
+          <div class="merch-info merch-name">
+            The Joshua Tree Tour Logo Black Mug
+          </div>
+          <div class="merch-info merch-price">US$20.00</div>
+        </div>
+      </div>
+      <div class="filtr-item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-category="accessories" data-sort="value">
+        <img class="image-responsive" src="./assets/images/merch/accessories/accessories-4.jpg" alt="U2 Zooropa Black Mug" />
+        <div class="merch-image-overlay">
+          <div class="merch-info merch-name">
+            U2 Zooropa Black Mug
+          </div>
+          <div class="merch-info merch-price">US$20.00</div>
+        </div>
+      </div>
+      <div class="filtr-item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-category="music" data-sort="value">
+        <img class="image-responsive" src="./assets/images/merch/music/music-3.jpg" alt="U2 the Joshua Tree 7lp Super Deluxe Box Set" />
+        <div class="merch-image-overlay">
+          <div class="merch-info merch-name">
+            U2 the Joshua Tree 7lp Super Deluxe Box Set
+          </div>
+          <div class="merch-info merch-price">US$169.95</div>
+        </div>
+      </div>
+      <div class="filtr-item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-category="music" data-sort="value">
+        <img class="image-responsive" src="./assets/images/merch/music/music-4.jpg" alt="U2 the Best of 1980-1990 2LP" />
+        <div class="merch-image-overlay">
+          <div class="merch-info merch-name">
+            U2 the Best of 1980-1990 2LP
+          </div>
+          <div class="merch-info merch-price">US$27.99</div>
+        </div>
+      </div>
+      <div class="filtr-item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-category="prints" data-sort="value">
+        <img class="image-responsive" src="./assets/images/merch/prints/prints-3.jpg" alt="Limited Edition Htdaab Art Lithograph by Adam-'HQ'" />
+        <div class="merch-image-overlay">
+          <div class="merch-info merch-name">
+            Limited Edition Htdaab Art Lithograph by Adam-'HQ'
+          </div>
+          <div class="merch-info merch-price">US$100.00</div>
+        </div>
+      </div>
+      <div class="filtr-item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-category="clothing" data-sort="value">
+        <img class="image-responsive" src="./assets/images/merch/clothing/clothing-5.jpg" alt="U2 Pop Lemon/Itin Navy T-shirt" />
+        <div class="merch-image-overlay">
+          <div class="merch-info merch-name">
+            U2 Pop Lemon/Itin Navy T-shirt
+          </div>
+          <div class="merch-info merch-price">US$30.00</div>
+        </div>
+      </div>
+      <div class="filtr-item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-category="clothing" data-sort="value">
+        <img class="image-responsive" src="./assets/images/merch/clothing/clothing-6.jpg" alt="U2 Logo Green T-shirt" />
+        <div class="merch-image-overlay">
+          <div class="merch-info merch-name">
+            U2 Logo Green T-shirt
+          </div>
+          <div class="merch-info merch-price">US$30.00</div>
+        </div>
+      </div>
+      <div class="filtr-item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-category="accessories" data-sort="value">
+        <img class="image-responsive" src="./assets/images/merch/accessories/accessories-5.jpg" alt="U2IE Tour Button Set" />
+        <div class="merch-image-overlay">
+          <div class="merch-info merch-name">
+            U2IE Tour Button Set
+          </div>
+          <div class="merch-info merch-price">US$10.00</div>
+        </div>
+      </div>
+      <div class="filtr-item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-category="accessories" data-sort="value">
+        <img class="image-responsive" src="./assets/images/merch/accessories/accessories-6.jpg" alt="U2IE Light Bulb Keychain" />
+        <div class="merch-image-overlay">
+          <div class="merch-info merch-name">
+            U2IE Light Bulb Keychain
+          </div>
+          <div class="merch-info merch-price">US$8.95</div>
+        </div>
+      </div>
+
+
+    </div>
   </div>
+
 
 </main>
 
+</body>
 
 <script
     src="https://code.jquery.com/jquery-3.3.1.js"
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+<script src="./assets/javascripts/jquery.filterizr.min.js"></script>
+<script src="./assets/javascripts/lodash.js"></script>
+<script src="./assets/javascripts/mobile-menu.js"></script>
 
-</body>
+<script>
+  var filterizd = $('.filtr-container').filterizr({
+
+  });
+
+$(document).ready(function() {
+    $('.filtr-container').filterizr({});
+    $('.filtr-button').click(function(){
+      if($(this).hasClass('active')){
+        return false;
+      } else {
+        $('.filtr-button').removeClass('active');
+        $(this).addClass('active');
+      }
+    })
+  });
+</script>
+
 </html>

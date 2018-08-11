@@ -4,9 +4,12 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>U2 - Media</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
   <link rel="stylesheet" type="text/css" href="./assets/stylesheets/normalize.css" />
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway:400,500,600,700" rel="stylesheet">
+  <link rel="stylesheet" href="./assets/stylesheets/lightbox.min.css" />
   <link href="./assets/stylesheets/styles.css" rel="stylesheet" type="text/css" />
 
 </head>
@@ -19,7 +22,7 @@
         <a href="index.html">
           <img class="logo" src="./assets/images/u2-white-logo.png" alt="U2 logo" width="110" height="60"/>
         </a>
-        <div id="naviicon" class="mobile-navi-icon">
+        <div id="MenuIcon" class="mobile-menu-icon">
             <div></div>
             <div></div>
             <div></div>
@@ -46,20 +49,96 @@
 
   <div class="container">
     <div class="row">
-      <div class="col-md-9">
+      <ul class="nav nav-tabs col-xs-12">
+        <li role="presentation" class="active"><a data-toggle="tab" href="#photos">Photos</a></li>
+        <li role="presentation"><a data-toggle="tab" href="#videos">Videos</a></li>
+      </ul>
 
+      <div class="tab-content">
+        <div id="photos" class="tab-pane fade in active">
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <a href="./assets/images/media/photos/photo-1.jpg" data-lightbox="photos" data-title="Songs of Experience, Extra Deluxe">
+              <img class="img-responsive lightbox-image" src="./assets/images/media/photos/photo-1-thumbnail.jpg" />
+            </a>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <a href="./assets/images/media/photos/photo-2.jpg" data-lightbox="photos" data-title="U218 - Cover">
+              <img class="img-responsive lightbox-image" src="./assets/images/media/photos/photo-2-thumbnail.jpg" />
+            </a>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <a href="./assets/images/media/photos/photo-3.jpg" data-lightbox="photos" data-title="Invisible - free for (RED)">
+              <img class="img-responsive lightbox-image" src="./assets/images/media/photos/photo-3-thumbnail.jpg" />
+            </a>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <a href="./assets/images/media/photos/photo-4.jpg" data-lightbox="photos" data-title="he Miracle (of Joey Ramone) - Single Cover">
+              <img class="img-responsive lightbox-image" src="./assets/images/media/photos/photo-4-thumbnail.jpg" />
+            </a>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <a href="./assets/images/media/photos/photo-5.jpg" data-lightbox="photos" data-title="U22 - 22 live tracks when you subscribe to u2.com">
+              <img class="img-responsive lightbox-image" src="./assets/images/media/photos/photo-5-thumbnail.jpg" />
+            </a>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <a href="./assets/images/media/photos/photo-6.jpg" data-lightbox="photos" data-title="Every Breaking Wave - Art Work">
+              <img class="img-responsive lightbox-image" src="./assets/images/media/photos/photo-6-thumbnail.jpg" />
+            </a>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <a href="./assets/images/media/photos/photo-7.jpg" data-lightbox="photos" data-title="How To Dismantle An Atomic Bomb - Cover">
+              <img class="img-responsive lightbox-image" src="./assets/images/media/photos/photo-7-thumbnail.jpg" />
+            </a>
+          </div>
+          <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+            <a href="./assets/images/media/photos/photo-8.jpg" data-lightbox="photos" data-title="Walk On - Single Cover">
+              <img class="img-responsive lightbox-image" src="./assets/images/media/photos/photo-8-thumbnail.jpg" />
+            </a>
+          </div>
+        </div>
+
+
+        <div id="videos" class="tab-pane fade">
+          <div class="col-xs-12 col-md-6">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/EM4vblG6BVQ" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/co6WMzDOh1o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/gwKEdFoUB0o" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+          <div class="col-xs-12 col-md-6">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/wFaoYK89QBY" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+          </div>
+        </div>
       </div>
     </div>
+
+
+
   </div>
 
 </main>
-
-
-<script
+</body>
+  <script
     src="https://code.jquery.com/jquery-3.3.1.js"
     integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
     crossorigin="anonymous"></script>
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="./assets/javascripts/lodash.js"></script>
+  <script src="./assets/javascripts/mobile-menu.js"></script>
 
-</body>
+  <!-- load lightbox -->
+  <script src="./assets/javascripts/lightbox.min.js"></script>
+
+  <!-- lightbox options -->
+  <script>
+    lightbox.option({
+      'resizeDuration': 200,
+      'wrapAround': true
+    })
+  </script>
+
 </html>
