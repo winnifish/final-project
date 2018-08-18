@@ -639,8 +639,8 @@ ul.filtr-bar{
 }
 
 .filtr-item img{
-  max-height: 300px;
-  width: 90%;
+  width: 300px;
+  height: 300px;
   display: block;
   margin: 20px auto;
   box-shadow: 0 10px 100px rgba(0, 0, 0, 0.2);
@@ -653,8 +653,8 @@ ul.filtr-bar{
   bottom: 0;
   left: 0;
   right: 0;
-  max-height: 300px;
-  width: 90%;
+  width: 300px;
+  height: 300px;
   display: block;
   margin: 20px auto;
   transition: .3s ease;
