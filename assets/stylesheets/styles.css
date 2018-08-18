@@ -16,7 +16,7 @@ html, body{
 }
 
 body{
-  background-color: #FFFBF4;
+  background-color: #FFFDF8;
 }
 
 p {
@@ -24,6 +24,11 @@ p {
 }
 
 a{
+  color: #147CE1;
+  text-decoration: none;
+}
+
+a:focus{
   color: #147CE1;
   text-decoration: none;
 }
@@ -41,14 +46,13 @@ header{
   top: 0;
   left: 0;
   right: 0;
-  background-color: rgba(80,60,25,.9);
+  background-color: rgba(80,55,25,.9);
   z-index:10;
 }
 
 .container{
   position: relative;
   margin: auto;
-  /* display: flex; */
 }
 
 @media only screen and (max-width: 600px) {
@@ -89,15 +93,11 @@ header{
   flex-wrap:wrap;
   width: 100%;
   margin: auto;
-  /* overflow-x: auto;
-  justify-content: space-between; */
-  /* -webkit-flex-wrap: nowrap; */
 }
 
 .logo{
   display: block;
   max-height: 60px;
-  /* max-width: 110px; */
   float: left;
   margin: 5px 5px;
 }
@@ -395,7 +395,6 @@ h1{
 
 
 /* NOTE: START about page */
-/* NOTE: START introduction section */
 .column {
     float: left;
     margin: 15px 10px;
@@ -419,15 +418,10 @@ h1{
   margin: 5px 0 10px 10px;
 }
 
-/* NOTE: SIDEBAR START */
-
 .side-title {
   border-left: 3px orange solid;
   padding-left: 12px;
   font-size: 20px;
-}
-
-.first-side-title{
   margin-top: 0;
 }
 
@@ -573,17 +567,21 @@ h1{
 }
 
 .lightbox-image:hover{
-  box-shadow: 10px 30px 80px rgba(0,0,0,.2);
+  box-shadow: 10px 30px 100px rgba(0,0,0,.4);
   z-index: 10;
+}
+
+.tab-content{
+  margin: auto;
 }
 
 iframe{
   display: flex;
   margin: 15px auto 30px;
+  max-width: 560px;
 }
 
 #videos{
-  width: 95%;
   margin: auto;
 }
 
@@ -595,16 +593,17 @@ ul.filtr-bar{
   padding: 0;
   list-style: none;
   font-size: 22px;
+  margin: 10px 0 0 0;
 }
 
 .filtr-bar li{
   padding: 10px 30px;
   margin: auto 20px;
   text-transform: capitalize;
+  white-space: nowrap;
 }
 
 .filtr-bar li:hover {
-  /* color: #FF9F00; */
   color: orange;
   cursor: pointer;
 }
@@ -615,8 +614,23 @@ ul.filtr-bar{
   color: black;
 }
 
-.filtr-container .row{
+@media only screen and (max-width: 736px) {
+  ul.filtr-bar {
+    display: block;
+  }
+  .filtr-bar li{
+    padding: 10px 20px;
+  }
+  .filtr-bar li.active{
+    border-left: 3px orange solid;
+    border-bottom: none;
+  }
+}
 
+@media only screen and (max-width: 1024px) {
+  .filtr-bar li{
+    margin: 0;
+  }
 }
 
 .filtr-item{
@@ -625,8 +639,9 @@ ul.filtr-bar{
 }
 
 .filtr-item img{
-  width: 300px;
-  height: 300px;
+  max-width: 300px;
+  max-height: 300px;
+  width: 90%;
   display: block;
   margin: 20px auto;
   box-shadow: 0 10px 100px rgba(0, 0, 0, 0.2);
@@ -639,7 +654,9 @@ ul.filtr-bar{
   bottom: 0;
   left: 0;
   right: 0;
-  width: 300px;
+  max-width: 300px;
+  max-height: 300px;
+  width: 90%;
   display: block;
   margin: 20px auto;
   transition: .3s ease;
@@ -654,6 +671,10 @@ ul.filtr-bar{
   cursor: no-drop;
 }
 
+.filtr-item:hover .overlay-available{
+  cursor: pointer;
+}
+
 .merch-info {
   position: relative;
   margin: auto;
@@ -665,7 +686,7 @@ ul.filtr-bar{
 }
 
 .merch-name{
-  top:30%;
+  top:20%;
   font-size: 22px;
 }
 
@@ -677,18 +698,23 @@ ul.filtr-bar{
 }
 
 .filtr-item:before{
-    content: "Sold Out";
-    width: 4rem;
-    height: 4rem;
-    border-radius: 100px;
-    position: absolute;
-    top: 12%;
-    left: 11%;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    z-index: 1;
-    background: rgba(255,0,0,.9);
+  content: "Sold Out";
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100px;
+  position: absolute;
+  top: 12%;
+  left: 11%;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  z-index: 1;
+  background: rgba(255,0,0,.9);
+}
+
+.filtr-item-available:before{
+  content: " ";
+  background: transparent;
 }
 
 
@@ -698,11 +724,8 @@ table{
   width: 100%;
   min-width: 1000px;
   margin: 30px 0;
-  /* border-collapse: collapse; */
   background-color: #FEF6EC;
-  /* background-color: white; */
   font-size: 18px;
-
 }
 
 thead{
@@ -714,7 +737,6 @@ thead tr th{
 }
 
 tbody tr:hover {
-  /* background-color: #FFFBF4; */
   background-color: white;
 }
 
@@ -757,6 +779,12 @@ tbody tr td:nth-child(4) {
   font-weight:600;
 }
 
+.button:focus{
+  background-color: transparent;
+  color: black;
+  text-decoration: none;
+}
+
 .button:hover{
   background-color: black;
   color: white;
@@ -768,4 +796,218 @@ tbody tr td.sold-out{
   color: red;
   font-weight: 600;
   padding-left: 10%;
+}
+
+
+/* NOTE: start merch-product page */
+.breadcrumb-container{
+  margin: 110px auto 0;
+}
+
+ul.breadcrumb{
+  background-color: transparent;
+  margin-bottom: 0;
+}
+
+.product-thumb-image{
+  width: 100%;
+  margin-bottom: 20px;
+  border: lightgrey 1px solid;
+}
+
+.active-thumb, .product-thumb-image:hover {
+  border: lightgrey 1px solid;
+  border-left: orange 3px solid;
+}
+
+.product-image-container{
+  padding: 0 50px 50px 0;
+}
+
+.product-image{
+  width: 100%;
+  border: lightgrey 1px solid;
+}
+
+.product-info{
+  padding-left: 0;
+}
+
+.product-name{
+  margin: 0 0 10px 0;
+}
+
+.product-price{
+  color: #FF9F00;
+  margin: 30px 0;
+}
+
+.size-guide{
+  text-align: right;
+  font-size: 14px;
+}
+
+.size{
+  margin: 10px auto 10px;
+  display: flex;
+}
+
+.size-box{
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.size-list{
+  border: 1px grey solid;
+  padding: 8px 15px;
+  border-radius: 5px;
+  margin: 0 10px 10px 10px;
+  cursor: pointer;
+  background-color: white;
+}
+
+.active-size, .size-list:hover {
+  border: 1px #FF9F00 solid;
+  color: #FF9F00;
+  font-weight: 600;
+}
+
+.input-group{
+  display: flex;
+}
+
+.button-hollow-circle{
+  padding: 0 10px;
+  margin: 0 20px;
+  border: lightgrey 1px solid;
+  border-radius: 20px;
+  color: black;
+  font-size: 30px;
+  background-color: white;
+}
+
+.button-hollow-circle:hover{
+  border: orange 1px solid;
+  color: orange;
+}
+
+.button-hollow-circle:focus{
+  outline: 0;
+}
+
+.input-group-field{
+  width: 50px;
+  text-align: center;
+  border: 1px lightgrey solid;
+}
+
+.input-group-field:focus{
+  outline: 0;
+  border: 1px grey solid;
+}
+
+.quantity{
+  display: flex;
+}
+
+.quantity-box{
+  display: flex;
+  list-style: none;
+  padding-left: 10px;
+}
+
+.quantity li.quantity-operator{
+  border: 1px grey solid;
+  padding: 0 10px;
+  border-radius: 20px;
+  margin: 0 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.quantity li.quantity-operator:hover{
+  border: 1px orange solid;
+  color: orange;
+}
+
+.quantity-number{
+  font-size: 20px;
+}
+
+.product-add{
+  width: 100%;
+  padding: 15px;
+  background-color: #FF9F00;
+  color: white;
+  font-size: 22px;
+  font-weight: 500;
+  margin: 40px auto 30px;
+}
+
+.product-add:hover{
+  background-color: orange;
+  color: #201400;
+  font-weight: 600;
+}
+
+.product-add:focus{
+  outline: 0;
+}
+
+.detail{
+  margin-top: 20px;
+}
+
+.detail-title{
+  font-weight: 600;
+}
+
+.detail-list{
+  line-height: 26px;
+  padding-top: 5px;
+}
+
+.maylike-title{
+  padding-bottom: 0;
+}
+
+.maylike-image {
+  width: 100%;
+  border: lightgrey 1px solid;
+  margin: 0 auto 20px;
+}
+
+.maylike-image-overlay{
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  display: block;
+  margin: 0 15px 20px 15px;
+  transition: .3s ease;
+  background-color: orange;
+  opacity: 0;
+  z-index: 10;
+}
+
+.maylike-item:hover .maylike-image-overlay{
+  opacity: .9;
+  cursor: no-drop;
+}
+
+.maylike-item:before{
+  content: "Sold Out";
+  width: 4rem;
+  height: 4rem;
+  border-radius: 100px;
+  position: absolute;
+  top: 5%;
+  left: 10%;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  z-index: 1;
+  background: rgba(255,0,0,.9);
 }

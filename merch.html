@@ -2,6 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="utf-8" />
+  <meta name="description" content="Final Project for HTML5/CSS3 Course">
+  <meta name="keywords" content="HTML,CSS,JavaScript,jQuery">
+  <meta name="author" content="Jing Yu">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>U2 - Merch</title>
   <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
@@ -10,7 +13,6 @@
   <link rel="stylesheet" type="text/css" href="./assets/stylesheets/normalize.css" />
   <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway:400,500,600,700" rel="stylesheet">
   <link href="./assets/stylesheets/styles.css" rel="stylesheet" type="text/css" />
-
 </head>
 
 <body>
@@ -79,14 +81,16 @@
           <div class="merch-info merch-price">US$40.00</div>
         </div>
       </div>
-      <div class="filtr-item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-category="clothing" data-sort="value">
+      <div class="filtr-item filtr-item-available col-xs-12 col-sm-6 col-md-4 col-lg-3" data-category="clothing" data-sort="value">
         <img class="image-responsive" src="./assets/images/merch/clothing/clothing-2.jpg" alt="U2 Logo Black T-shirt" />
-        <div class="merch-image-overlay">
+        <a href="merch-product.html">
+        <div class="merch-image-overlay overlay-available">
           <div class="merch-info merch-name">
             U2 Logo Black T-shirt
           </div>
           <div class="merch-info merch-price">US$30.00</div>
         </div>
+        </a>
       </div>
       <div class="filtr-item col-xs-12 col-sm-6 col-md-4 col-lg-3" data-category="accessories" data-sort="value">
         <img class="image-responsive" src="./assets/images/merch/accessories/accessories-1.jpg" alt="The Joshua Tree Tour Logo Black Mug" />
@@ -274,7 +278,7 @@ $(document).ready(function() {
         $('.filtr-button').removeClass('active');
         $(this).addClass('active');
       }
-    })
+    });
   });
 </script>
 

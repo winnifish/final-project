@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="description" content="Final Project for HTML5/CSS3 Course">
+  <meta name="keywords" content="HTML,CSS,JavaScript,jQuery">
+  <meta name="author" content="Jing Yu">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>U2 - Merch</title>
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="./assets/images/favicon-16x16.png">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css">
+  <link rel="stylesheet" type="text/css" href="./assets/stylesheets/normalize.css" />
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Raleway:400,500,600,700" rel="stylesheet">
+  <link href="./assets/stylesheets/styles.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+<header>
+  <div class="container header">
+    <div class="row">
+      <div class="col-xs-12 col-sm-3">
+        <a href="index.html">
+          <img class="logo" src="./assets/images/u2-white-logo.png" alt="U2 logo" width="110" height="60"/>
+        </a>
+        <div id="MenuIcon" class="mobile-menu-icon">
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+      </div>
+
+      <nav id="navigation" class="col-xs-12 col-sm-9">
+        <a href="about.html">about</a>
+        <a href="discography.html">discography</a>
+        <a href="media.html">media</a>
+        <a class="current" href="merch.html">merch</a>
+        <a href="tours.html">tours</a>
+      </nav>
+    </div>
+  </div>
+</header>
+
+<main>
+  <div class="container breadcrumb-container">
+    <div class="row">
+      <ul class="breadcrumb">
+        <li><a href="index.html">U2</a></li>
+        <li><a href="merch.html">Merch</a></li>
+        <li>U2 Logo Black T-shirt</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row">
+      <div id="thumb-image" class="col-xs-2 col-md-1 thumb">
+        <div class="column-thumb">
+          <img class="product-thumb-image active-thumb image-responsive" src="./assets/images/merch/clothing/clothing-2-large.jpg" alt="U2 Logo Black T-shirt" onclick="myFunction(this);">
+        </div>
+        <div class="column-thumb">
+          <img class="product-thumb-image image-responsive" src="./assets/images/merch/clothing/clothing-2-back.jpg" alt="U2 Logo Black T-shirt Backside" onclick="myFunction(this);">
+        </div>
+      </div>
+
+      <div class="col-xs-10 col-md-7 product-image-container">
+        <img class="product-image" src="./assets/images/merch/clothing/clothing-2-large.jpg" id="expandedImg" style="width:100%">
+      </div>
+
+      <div class="col-xs-12 col-md-4 product-info">
+        <h2 class="product-name">U2 Logo Black T-shirt</h2>
+        <p>
+          Black, 100% cotton, short-sleeved t-shirt with the U2 logo printed on the front.
+        </p>
+        <h3 class="product-price">US$30.00</h3>
+        <div class="size-guide"><a href="#"><i class="zmdi zmdi-ruler zmdi-hc-rotate-270"></i>  Size Guide</a></div>
+        <div class="size">
+          Size:
+          <ul id="size-button" class="size-box">
+            <li class="size-list active-size">S</li>
+            <li class="size-list">M</li>
+            <li class="size-list">L</li>
+            <li class="size-list">XL</li>
+            <li class="size-list">XXL</li>
+          </ul>
+        </div>
+        <div class="quantity">
+          Quantity:
+          <div class="input-group plus-minus-input">
+            <div class="input-group-button">
+              <button type="button" class="button-hollow-circle" data-quantity="minus" data-field="quantity">
+                <i class="fa fa-minus" aria-hidden="true"></i>-
+              </button>
+            </div>
+            <input class="input-group-field" type="text" name="quantity" value="1">
+            <div class="input-group-button">
+              <button type="button" class="button-hollow-circle" data-quantity="plus" data-field="quantity">
+                <i class="fa fa-plus" aria-hidden="true"></i>+
+              </button>
+            </div>
+          </div>
+        </div>
+
+        <button class="product-add">Add to Cart</button>
+
+        <div class="detail">
+          <span class="detail-title">Details:</span>
+          <ul class="detail-list">
+            <li>100% Cotton</li>
+            <li>Non-Stretch Jersey</li>
+            <li>Crewneck</li>
+            <li>Short sleeves</li>
+            <li>Imported</li>
+            <li>Regular fit</li>
+          </ul>
+        </div>
+        <div class="detail">
+          <span class="detail-title">Washing Instructions:</span>
+          <ul class="detail-list">
+            <li>Wash and dry inside out with like colors</li>
+            <li>liquid detergent is recommended</li>
+            <li>Do not iron decoration</li>
+          </ul>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <div class="container">
+    <div class="row maylike-title">
+      <h2>Customers Who Viewed This Also Viewed</h2>
+    </div>
+    <div class="row">
+      <div class="maylike-item col-xs-6 col-md-4 col-lg-3">
+        <img class="maylike-image image-responsive" src="./assets/images/merch/clothing/clothing-1.jpg" alt="U2 Logo Black T-shirt" />
+        <div class="maylike-image-overlay">
+          <div class="merch-info merch-name">
+            U2 Herstory Ocean Blue Ladies T-shirt
+          </div>
+          <div class="merch-info merch-price">US$40.00</div>
+        </div>
+      </div>
+      <div class="maylike-item col-xs-6 col-md-4 col-lg-3">
+        <img class="maylike-image image-responsive" src="./assets/images/merch/clothing/clothing-3.jpg" alt="U2 Logo Black T-shirt" />
+        <div class="maylike-image-overlay">
+          <div class="merch-info merch-name">
+            U2 Elevation Grey T-shirt
+          </div>
+          <div class="merch-info merch-price">US$30.00</div>
+        </div>
+      </div>
+      <div class="maylike-item col-xs-6 col-md-4 col-lg-3">
+        <img class="maylike-image image-responsive" src="./assets/images/merch/accessories/accessories-5.jpg" alt="U2 Logo Black T-shirt" />
+        <div class="maylike-image-overlay">
+          <div class="merch-info merch-name">
+            U2IE Tour Button Set
+          </div>
+          <div class="merch-info merch-price">US$10.00</div>
+        </div>
+      </div>
+      <div class="maylike-item col-xs-6 col-md-4 col-lg-3">
+        <img class="maylike-image image-responsive" src="./assets/images/merch/accessories/accessories-1.jpg" alt="U2 Logo Black T-shirt" />
+        <div class="maylike-image-overlay">
+          <div class="merch-info merch-name">
+            The Joshua Tree Tour Logo Black Mug
+          </div>
+          <div class="merch-info merch-price">US$20.00</div>
+        </div>
+      </div>
+      </div>
+    </div>
+  </div>
+
+</main>
+</body>
+
+  <script
+      src="https://code.jquery.com/jquery-3.3.1.js"
+      integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+      crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+  <script src="./assets/javascripts/jquery.filterizr.min.js"></script>
+  <script src="./assets/javascripts/lodash.js"></script>
+  <script src="./assets/javascripts/mobile-menu.js"></script>
+  <script src="./assets/javascripts/merch-product.js"></script>
+
+</html>

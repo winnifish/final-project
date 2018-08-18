@@ -10,4 +10,16 @@ $(document).ready(function(){
   $('#navigation > a').on('click', function(){
     $('#navigation').slideUp();
   });
+
+  // $('#navigation').slideUp();
+
+    $(window).resize(function(){
+      if($(document).width() > 735) {
+        $('#navigation').hide()
+      }
+    });
+
+    $('#navigation > a').on("click", function(){
+      $('#navigation').slideUp();
+    });
 })
